@@ -42,6 +42,16 @@ elif fileMode == "-m":
         content = fp.read()        
         print(str(len(content)) + "  " + fileName)
     fp.close()    
+# - Output the number of characters in file
+elif fileMode == "-":
+    with open("./" + fileName,"r") as fp:
+        lines = len(fp.readlines())
+        fileSize = os.path.getsize("./" + fileName)        
+    fp.close()
     
     
+    with open("./" + fileName,"r") as fp:
+        words = len(fp.read().split())      
+        print(str(fileSize) + "  "  + str(lines) + "  "  + str(words) + " " + fileName)
+    fp.close()    
 print("ALL SET")

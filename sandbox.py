@@ -8,8 +8,9 @@ if len(currentArgs) != 2 or currentArgs[0][0] != "-" or len(currentArgs[0]) != 2
     sys.exit()
     
 
-
-if os.path.isfile("./" + currentArgs[1]):
+print(currentArgs[1])
+print(os.getcwd())
+if os.path.isfile("./" + currentArgs[1]) is False:
     print("File not found")
 else:
     print("File Found")

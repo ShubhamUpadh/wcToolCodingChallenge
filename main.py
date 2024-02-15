@@ -25,4 +25,10 @@ if os.path.isfile("./" + fileName) is False:
 if fileMode == "-c":
     print(str(os.path.getsize("./" + fileName)) + "  " + fileName)
 
+# -l Output the number of lines in file
+elif fileMode == "-l":
+    with open("./" + fileName,"r") as fp:
+        print(str(len(fp.readlines())) + "  " + fileName)
+    fp.close()
+
 

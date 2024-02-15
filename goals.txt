@@ -1,0 +1,3 @@
+Step 1 - Understand the option from the command line
+Step 2 - Open the concerned file from the command line
+Step 3 - Print the desired option + file name

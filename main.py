@@ -30,5 +30,19 @@ elif fileMode == "-l":
     with open("./" + fileName,"r") as fp:
         print(str(len(fp.readlines())) + "  " + fileName)
     fp.close()
+    
+# -w Output the number of words in file
+elif fileMode == "-w":
+    with open("./" + fileName,"r") as fp:
+        content = fp.read()
+        wordCount = len(content.split())
+        print(str(wordCount) + "  " + fileName)
+    fp.close()  
+
+# -m Output the number of characters in file
+elif fileMode == "-m":
+    with open("./" + fileName,"r") as fp:
+        content = fp.read()        
+        print(str(len(content)) + "  " + fileName)
 
 
